@@ -33,8 +33,9 @@ const ClientForm = (props) => {
         props.onAdd(event, newClient)
 
     };
-
-
+    const Close = () => {
+        props.onClose()
+    }
 
     return (
         <form onSubmit={submitHandler}>
@@ -45,7 +46,7 @@ const ClientForm = (props) => {
                 </div>
                 <div className='control'>
                     <label>id</label>
-                    <input type='text' placeholder='id'  pattern="[0-9]{9}" title='Enter only 9 numbers' required onChange={idChangeHandler} />
+                    <input type='text' placeholder='id' pattern="[0-9]{9}" title='Enter only 9 numbers' required onChange={idChangeHandler} />
                 </div>
                 <div className='control'>
                     <label>ip</label>
@@ -57,7 +58,7 @@ const ClientForm = (props) => {
                 </div>
             </div>
             <div>
-                <button type='submit'>Submit</button>
+                <button type='submit'>Submit</button> <button onClick={Close}>Cancel</button>
             </div>
         </form>
     );
