@@ -17,6 +17,7 @@ const Clients = (props) => {
                 <Client
                     onDelete={props.onDelete}
                     key={index}
+                    _id={client._id}
                     name={client.name}
                     id={client.id}
                     ip={client.ip}

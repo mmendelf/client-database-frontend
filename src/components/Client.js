@@ -10,7 +10,7 @@ const Client = (props) => {
             <h2>id: {props.id}</h2>
             <h2>ip: {props.ip}</h2>
             <h2>phone: {props.phone}</h2>
-            <DeleteClient onDelete={props.onDelete} id={props.id} />
+            <DeleteClient onDelete={props.onDelete} id={props._id} />
             <hr />
         </div>
     )
